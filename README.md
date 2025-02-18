@@ -39,3 +39,61 @@ NPM: manages packages it is not stand for node package manager. It is a standard
 -sometimes our app is running on dev environment but it fails on production. To avoid this. we have a integrity key in our package in package-lock to avoid this. It basically do is, keeps the hash for the package version and ensures the same version for production.
 -NODE_MODULES: contains all the code that we fetched from npm. (It is kind of database for all the packages that exists in project. All packages code exists in node_modules)
 -i just install parcel in my package.json but there are many folders others than parcel code in node_modules is because the parcel project has its own dependencies (can itself be dependent on many other dependencies) and these dependencies could have their own. These are known as transitive dependencies.
+-NM is a collection of dependencies. If you have package and package-lock.json we can regenerate our node_modules.
+-Whatever you can regenerate, don't put it on git.
+
+-By using parcel, we ignite our app by following command:
+   ...npx parcel {{index.html}}
+-It created a server for us and our app by taking ms to build our app and hosted the app on it.
+
+NPX: similar to NPM. 
+-NPX means executing the package.
+-NPM installs the package and NPX executes the package. (parcel takes index.html and makes a development build for localhost:...).
+-Another way to inject react into our app is via NPM.
+
+-we add type="module" in our index.html script tag to tell browser that app.js is not a normal browser file it is a module.
+
+PARCEL:
+-DEV build
+-Local Server
+-HMR = Hot Module Replacement (AS changes are saved, parcel automatically reflects changes on UI) - It is keeping eyes on all files.
+-It makes the developer experience so smooth
+-Using File watching algorithm - written in C++.
+-Faster Build (by caching things for you)
+-Image Optimization
+-Minification of our file also
+-Bundles all the files for us.
+-Compress
+-Consistent hashing
+-Code splitting
+-Differential Bundling - support older browsers(so that your app can run on older browsers as well)
+-Diagnostic
+-Error Handling
+-HTTPS (Gives you a way to host your app on https)
+-Tree Shaking - remove unused code for you
+-Different dev and production bundles (more optimization on production than on dev)
+
+-The most expensive thing in your browser is to load the images in your page.
+-React is not the only thing that is making your app fast. We used a lot more things to make it fast like bundlers
+
+-DIST folder: where parcel places the build files in our project.
+
+FOR PRODUCTION BUILD:
+npx parcel build index.html
+
+-We have to tell our app that what browsers should our app can support. BROWSERSLIST.dev and configure it in our package.json list. e.g: ["last 2 Chrome version"] that means it can or cannot work on other versions or browsers but it definitely works on the last 2 Chrome version
+-can also configure countries specific configuration.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
