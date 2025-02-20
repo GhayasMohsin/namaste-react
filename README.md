@@ -127,7 +127,12 @@ FUNCTIONAL COMPONENT:
 -Functional component in react is a js function that returns some piece of JSX element. (A function that returns the react element).
 -A functional that is returning some react element is a functional component.
 
+COMPONENT COMPOSITION:
+-2 components composed into one another.
 
+CROSS-SITE SCRIPTING:
+-Code executed by the js in our application being injected through the api. (Cross-site scripting (XSS) is a web security vulnerability that allows attackers to inject malicious code into a user's browser)
+-JSX takes care of this injection attacks. (It escapes the injected malicious code - sanitizes)
 
 
 
