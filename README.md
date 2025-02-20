@@ -84,6 +84,48 @@ npx parcel build index.html
 -We have to tell our app that what browsers should our app can support. BROWSERSLIST.dev and configure it in our package.json list. e.g: ["last 2 Chrome version"] that means it can or cannot work on other versions or browsers but it definitely works on the last 2 Chrome version
 -can also configure countries specific configuration.
 
+EPISODE-3 - Laying the foundation
+-Writing npm scripts to run project is Industry standard.
+
+JSX: Syntax made by facebook developers
+-It is not a part of react.
+-JSX makes the developers life easy.
+-React tries to merge the traditional html and js files.
+-JSX is a convention where we merge these html and js files together.
+-JSX is not html inside javascript.
+-JSX is not html, it is html-like/xml-like syntax.
+
+React.createElement(); ---> creating react element by using core react.
+
+const jsx= <h1>Hi</h1>  ----> creating react element using jsx syntax
+
+-js doesnot comes with jsx build inside it.
+-this code is transpiled(converted to the code that browsers can understand) before it goes to the js engine.
+-transpilation by Parcel --> Babel(converts this code that is understand by react)
+
+Babel:
+-js compiler also known as transpiler. Takes jsx and converts it that js engine can understand.
+-can transpile the code that the older brower can also understand.
+
+React.createElement ==> ReactElement-JS Object ==> HTMLElement(render)
+
+JSX =====> React.createElement ==> ReactElement-JS Object ==> HTMLElement(render)
+
+-JSX at the end of the day is react.createElement (Babel is converting JSX to React.createElement).
+-If you have to give attribute to jsx, we write it in camelCase.
+-Wrap jsx in parenthesis for multiline for valid jsx for babel. Babel needs to understand.
+
+REACT COMPONENTS:
+-The statement "Everything in react is a component" is true.
+-There are 2 types of react components:
+   ...Class Based Components - OLD way of writing component (uses JS Classes)
+   ...Functional Components - NEW way of writing component (uses JS functions)
+
+FUNCTIONAL COMPONENT:
+-It is just a normal javascript function.
+-Whenever you made component in react name it with capital letter.
+-Functional component in react is a js function that returns some piece of JSX element. (A function that returns the react element).
+-A functional that is returning some react element is a functional component.
 
 
 
